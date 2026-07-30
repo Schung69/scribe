@@ -55,27 +55,25 @@
         </section>
 
         {{-- Un écosystème global --}}
-        <section id="agence" class="diag relative -mt-[4vw] bg-scribe-beige pt-[calc(4vw+5rem)] pb-24 px-6 lg:px-12">
+        <section id="agence" class="diag relative -mt-[4vw] bg-scribe-beige pt-[calc(4vw+5rem)] pb-31 px-6 lg:px-12">
             <div class="mx-auto max-w-[1300px]">
-                <div class="grid gap-8 md:grid-cols-2 md:gap-16">
+                <div class="grid items-center gap-8 md:grid-cols-2 md:gap-16">
                     <div>
                         <p class="text-base font-semibold tracking-[0.2em] text-scribe-slate">UN ÉCOSYSTÈME GLOBAL</p>
                         <h2 class="mt-3 font-serif font-semibold text-3xl leading-snug text-scribe-brown sm:text-4xl">
                             Une agence RP.<br>
                             <em class="italic font-light text-scribe-brown">Au cœur d'une agence globale.</em>
                         </h2>
-                    </div>
-                    <div class="flex items-center">
-                        <p class="text-lg text-scribe-brown">
+                        <p class="mt-4 max-w-xl text-lg text-scribe-brown">
                             SCRIBE se suffit à elle-même comme agence de relations presse pure. Mais elle s'appuie sur un écosystème complet, à la pointe de la technologie, capable de gérer l'image entière de ses annonceurs.
                         </p>
                     </div>
-                </div>
 
-                <div class="mt-20 flex flex-col items-center text-center">
-                    <img src="{{ asset('images/logo-scribe-2.png') }}" alt="Scribe — Relations presse & publics" class="h-32 w-auto opacity-90 sm:h-40">
-                    <p class="mt-6 text-xs font-semibold tracking-[0.2em] text-scribe-brown uppercase">Relations presse & publics</p>
-                    <p class="mt-2 max-w-md text-base text-scribe-brown">Storytelling, communiqué et dossiers de presse, veille média, gestion de crise.</p>
+                    <div class="flex flex-col items-end text-right">
+                        <img src="{{ asset('images/logo-scribe-2.png') }}" alt="Scribe — Relations presse & publics" class="h-32 w-auto opacity-90 sm:h-40">
+                        <p class="mt-6 text-xs font-semibold tracking-[0.2em] text-scribe-brown uppercase">Relations presse & publics</p>
+                        <p class="mt-2 max-w-md text-base text-scribe-brown">Storytelling, communiqué et dossiers de presse, veille média, gestion de crise.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -83,7 +81,7 @@
         {{-- Diagonal statement banner --}}
         <section class="diag-rev relative -mt-[4vw] bg-scribe-cream pt-[calc(4vw+4rem)] pb-20 px-6 lg:px-12">
             <div class="mx-auto max-w-[1300px]">
-                <p class="max-w-4xl font-sans text-3xl font-bold leading-relaxed text-stone-950 sm:text-4xl lg:text-5xl">
+                <p class="max-w-4xl font-sans text-3xl font-bold leading-tight text-stone-950 sm:text-4xl lg:text-5xl">
                     <span class="-rotate-[1.5deg] inline-block">De la plaquette au site web, du</span><br>
                     <span class="ml-8 block rotate-[1deg] text-scribe-slate-muted sm:ml-8">communiqué à la campagne :</span>
                     <span class="ml-8 block rotate-[2deg] sm:ml-12">un seul interlocuteur pour toute</span>
@@ -256,11 +254,11 @@
 
                 <div class="mt-1">
                     <div class="flex flex-wrap items-center gap-x-4">
-                        <p class="font-serif text-[10rem] leading-none font-black text-[#e9ded1] sm:text-[14rem]">20+</p>
+                        <p class="font-serif text-[10rem] leading-none font-black text-[#e9ded1] sm:text-[21rem]">20+</p>
                         <p class="font-semibold text-[#978e86] sm:-ml-100">années d'expertise<br>en relations presse.</p>
                     </div>
-                    <div class="absolute flex flex-wrap items-center gap-x-4 sm:-mt-16 sm:ml-[45%]">
-                        <p class="font-serif text-[10rem] leading-none font-black text-[#e9ded1] sm:text-[14rem]">03</p>
+                    <div class="absolute flex flex-wrap items-center gap-x-4 sm:mt-[calc(150px_*_-1)] sm:ml-[55%]">
+                        <p class="font-serif text-[10rem] leading-none font-black text-[#e9ded1] sm:text-[21rem]">03</p>
                         <p class="font-semibold text-[#978e86] sm:-ml-20">attachés de presse<br>à temps plein.</p>
                     </div>
                 </div>
@@ -271,7 +269,7 @@
         <section class="diag-rev relative -mt-[3vw] bg-scribe-beige pt-[calc(3vw+1rem)] pb-10 px-6 lg:px-12">
             <div class="mx-auto max-w-[1300px]">
                 <div class="flex flex-wrap items-center gap-x-4">
-                    <p class="font-serif text-[10rem] leading-none font-black text-[#f4ecdf] sm:text-[14rem]">360°</p>
+                    <p class="font-serif text-[10rem] leading-none font-black text-[#f4ecdf] sm:text-[21rem]">360°</p>
                     <p class="font-semibold text-[#978e86] sm:-ml-32">tous supports : écrit,<br>audiovisuel, digital, web.</p>
                 </div>
             </div>
