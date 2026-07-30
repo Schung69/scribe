@@ -1,0 +1,13 @@
+Éléments :
+bleu : #95b6c1
+beige : #e9ded1
+beige clair : #f4ecdf
+
+Textes :
+noir : #f6ecde
+bleu : #a3c4d1
+marron : #978e86
+
+
+
+Fonts utilisées : Poppins (thin, light, italic, medium, semi bold, bold, etc...)
