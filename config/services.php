@@ -28,6 +28,11 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    // Formulaire de contact du site : destinataires des messages (séparés par des virgules dans CONTACT_RECIPIENTS)
+    'contact' => [
+        'recipients' => array_filter(array_map('trim', explode(',', env('CONTACT_RECIPIENTS', '')))),
+    ],
+
     'slack' => [
         'notifications' => [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),

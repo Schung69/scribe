@@ -1,3 +1,17 @@
+import { initCamera } from './camera';
+import { initContactForm } from './contact-form';
+import { initHeroIntro } from './hero-intro';
+import { initHeroVideo } from './hero-video';
+import { initMembersScroll } from './members-scroll';
+import { initSectionSlides } from './section-slides';
+
+initHeroVideo();
+initHeroIntro();
+initMembersScroll();
+initSectionSlides();
+initCamera();
+initContactForm();
+
 const menuToggle = document.getElementById('menu-toggle');
 const menuClose = document.getElementById('menu-close');
 const menuPanel = document.getElementById('menu-panel');

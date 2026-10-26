@@ -25,3 +25,7 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Fichiers de travail du graphiste et ancienne vidéo source (non utilisés par le site)
+/__maquettes
+/public/video_src

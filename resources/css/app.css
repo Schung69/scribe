@@ -6,13 +6,104 @@
 @theme {
     --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-serif: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 
-    --color-scribe-blue: #95b6c1;
-    --color-scribe-beige: #e9ded1;
-    --color-scribe-cream: #f4ecdf;
-    --color-scribe-ink: #f6ecde;
-    --color-scribe-slate: #a3c4d1;
-    --color-scribe-slate-muted: #949ea6;
-    --color-scribe-brown: #978e86;
+    /* Charte 2026 */
+    --color-scribe-green: #2c594e;        /* vert foncé : textes sur fond clair, bandeaux */
+    --color-scribe-green-light: #b3cbaa;  /* vert clair : accents sur fond foncé */
+    --color-scribe-red: #c3392f;          /* rouge : labels, accroches */
+    --color-scribe-bg: #eff2ed;           /* fond général */
+    --color-scribe-band: #c7debe;         /* bande « L'humain d'abord » (valeur maquette) */
+    --color-scribe-sheet: #dee6d9;        /* feuille derrière les photos de l'équipe */
+    --color-scribe-grey: #8a8d91;         /* logo et textes du bloc écosystème */
+}
+
+/* Chiffres en contour seul (20+, 03, 360°) : text-outline-{couleur} */
+@utility text-outline-* {
+    color: transparent;
+    -webkit-text-stroke: 2px --value(--color-*);
+}
+
+/*
+ * Sections à bord haut en diagonale.
+ *   diag / diag-rev       : sens de la diagonale (monte / descend vers la droite)
+ *   diag-bg-{couleur}     : couleur de fond de la section (remplace bg-*, sinon le rectangle entier serait peint)
+ *   diag-pad-{n}          : espace entre la diagonale et le contenu (échelle Tailwind, 5rem par défaut)
+ * La section remonte de --diag sur la précédente ; seul son fond (::before) est découpé, pas son contenu,
+ * qui peut donc déborder librement (trombones, images, ombres).
+ */
+:root {
+    --diag: clamp(32px, 7vw, 130px);
+}
+
+@utility diag {
+    position: relative;
+    isolation: isolate;
+    margin-top: calc(var(--diag) * -1);
+    padding-top: calc(var(--diag) + var(--diag-pad, 5rem));
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-color: var(--diag-bg, transparent);
+        clip-path: polygon(0 var(--diag), 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@utility diag-rev {
+    position: relative;
+    isolation: isolate;
+    margin-top: calc(var(--diag) * -1);
+    padding-top: calc(var(--diag) + var(--diag-pad, 5rem));
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-color: var(--diag-bg, transparent);
+        clip-path: polygon(0 0, 100% var(--diag), 100% 100%, 0 100%);
+    }
+}
+
+@utility diag-bg-* {
+    --diag-bg: --value(--color-*);
+}
+
+@utility diag-pad-* {
+    --diag-pad: --spacing(--value(integer));
+}
+
+/* Hero : titre masqué tant que l'animation d'écriture ne l'a pas préparé (voir hero-intro.js) */
+.js #hero-title:not(.is-ready) {
+    visibility: hidden;
+}
+
+/* Trombones des secteurs : masqués jusqu'à leur animation (sinon ils s'affichent en place puis « glissent »).
+   GSAP les rend visibles en les animant ; sans animation (mouvement réduit), ils restent affichés. */
+@media (prefers-reduced-motion: no-preference) {
+    .js .secteur-clip,
+    .js .contact-clip {
+        visibility: hidden;
+    }
+}
+
+.type-caret {
+    display: inline-block;
+    width: 0.06em;
+    height: 0.9em;
+    margin-left: 0.05em;
+    vertical-align: -0.08em;
+    background: var(--color-scribe-green-light);
+}
+
+.type-caret.is-blinking {
+    animation: caret-blink 0.9s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+    50% { opacity: 0; }
 }
