@@ -382,8 +382,6 @@
                     <p class="mt-6 max-w-md text-lg">
                         Un lancement, une annonce, une prise de parole délicate : racontez-nous votre projet, l'équipe revient vers vous rapidement.
                     </p>
-                    <p class="mt-8 text-sm font-medium tracking-[0.2em] uppercase">Ou appelez-nous</p>
-                    <a href="tel:+33388143179" class="mt-1 inline-block text-2xl font-bold hover:text-scribe-red">+33 (0)3 88 14 31 79</a>
                 </div>
 
                 <div class="relative">
